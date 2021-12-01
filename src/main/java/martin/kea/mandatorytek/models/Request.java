@@ -1,8 +1,22 @@
 package martin.kea.mandatorytek.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
 public class Request {
+
+    @Id
     private Long id;
+
+    @ManyToOne
     private User source;
+
+    @ManyToOne
     private User destination;
+
+    @Column
     private String requestMethod;
 }

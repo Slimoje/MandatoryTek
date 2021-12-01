@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @Table(name="users")
@@ -24,7 +25,12 @@ public class User {
     @Column
     private boolean internal;
 
+    @ManyToMany
     private List<User> friends;
+
+    @ManyToMany
     private List<User> blockedContacts;
+
+    @OneToMany(mappedBy = "destination", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Request> requests;
 }
