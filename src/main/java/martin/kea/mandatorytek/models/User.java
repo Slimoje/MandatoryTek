@@ -33,4 +33,9 @@ public class User {
 
     @OneToMany(mappedBy = "destination", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Request> requests;
+
+    public User(String email, String host) {
+        this.email = email;
+        this.host = host;
+    }
 }

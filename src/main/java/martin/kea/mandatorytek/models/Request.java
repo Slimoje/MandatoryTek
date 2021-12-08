@@ -18,4 +18,10 @@ public class Request {
 
     @Column
     private String requestMethod;
+
+    public Request(User source, User destination, String method) {
+        this.source = source;
+        this.destination = destination;
+        requestMethod = method;
+    }
 }
