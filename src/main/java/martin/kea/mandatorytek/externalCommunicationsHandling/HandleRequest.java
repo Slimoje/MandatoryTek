@@ -21,7 +21,7 @@ public class HandleRequest {
 
         User userDestination = new User(destination, destinationHost);
 
-        if(userRepository.existsByEmail(sourceHost)) {
+        if(userRepository.existsByEmail(destination)) {
             Request newRequest = new Request(userSource, userDestination, "Add");
 
             requestRepository.save(newRequest);
