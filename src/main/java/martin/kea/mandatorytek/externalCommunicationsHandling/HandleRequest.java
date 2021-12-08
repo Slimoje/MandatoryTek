@@ -5,7 +5,9 @@ import martin.kea.mandatorytek.models.User;
 import martin.kea.mandatorytek.repositories.RequestRepository;
 import martin.kea.mandatorytek.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class HandleRequest {
 
     @Autowired
