@@ -29,16 +29,16 @@ public class ReceiveRequest {
                 handleRequest.handleAddRequest(source, sourceHost, destination, destinationHost);
                 break;
             case "Accept":
-                System.out.println();
+                handleRequest.handleAcceptRequest();
                 break;
             case "Deny":
-                System.out.println();
+                handleRequest.handleDenyRequest();
                 break;
             case "Remove":
-                System.out.println();
+                handleRequest.handleRemoveRequest();
                 break;
             case "Block":
-                System.out.println();
+                handleRequest.handleBlockRequest();
                 break;
             default:
                 System.out.println();
