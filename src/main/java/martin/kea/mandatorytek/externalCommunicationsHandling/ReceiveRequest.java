@@ -26,7 +26,7 @@ public class ReceiveRequest {
         double version = scan.nextDouble();
         switch (method) {
             case "Add":
-                handleRequest.handleFriendRequest(source, sourceHost, destination, destinationHost);
+                handleRequest.handleAddRequest(source, sourceHost, destination, destinationHost);
                 break;
             case "Accept":
                 System.out.println();

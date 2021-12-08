@@ -16,7 +16,7 @@ public class HandleRequest {
     @Autowired
     RequestRepository requestRepository;
 
-    public String handleFriendRequest(String source, String sourceHost, String destination, String destinationHost) {
+    public String handleAddRequest(String source, String sourceHost, String destination, String destinationHost) {
         User userSource = new User(source, sourceHost);
 
         User userDestination = new User(destination, destinationHost);
@@ -31,5 +31,20 @@ public class HandleRequest {
         return "This user does not exist.";
     }
 
+    public String handleAcceptRequest() {
+        return null;
+    }
+
+    public String handleDenyRequest() {
+        return null;
+    }
+
+    public String handleRemoveRequest() {
+        return null;
+    }
+
+    public String handleBlockRequest() {
+        return null;
+    }
 
 }
